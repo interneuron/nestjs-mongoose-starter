@@ -18,4 +18,8 @@ export class UsersService {
   async findAll(): Promise<User[]> {
     return await this.userModel.find().exec();
   }
+
+  async getById(userId: string): Promise<User> {
+    return await this.userModel.findById(userId).exec();
+  }
 }

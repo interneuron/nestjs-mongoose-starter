@@ -1,4 +1,5 @@
-POST http://localhost:3001/users
+GET http://localhost:3001/users/5a4d662bd2b4933f34b601cd
+Content-Type: application/json
 
 {
   "username": "ekonash",

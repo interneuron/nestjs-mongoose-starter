@@ -8,13 +8,15 @@ export class UsersController {
   constructor(private readonly userService: UsersService) {}
 
   @Post()
-  async create(@Body() createUserDto: CreateUserDto) {
-    return { 
-      err: "An error occurred",
-      user: createUserDto,
-    }
+  create(@Body() userDto: CreateUserDto) {
+    this.userService.create(userDto)
   }
-
+  
+  @Get("/:userId")
+  getById(@Param("userId") userId: string) {
+    return this.userService.getById(userId)
+  }
+  
   @Get()
   async findAll(): Promise<User[]> {
     return this.userService.findAll();
