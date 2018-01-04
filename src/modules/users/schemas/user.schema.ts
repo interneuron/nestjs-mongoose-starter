@@ -17,4 +17,4 @@ export const UserSchema = new mongoose.Schema({
     type: String,
     ref: mongoose.Schema.Types.ObjectId 
   }]
-});
+}, { timestamps: true });
