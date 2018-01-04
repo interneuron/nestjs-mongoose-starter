@@ -1,4 +1,4 @@
-GET http://localhost:3001/users/5a4d662bd2b4933f34b601cd
+GET http://localhost:3001/users
 Content-Type: application/json
 
 {
