@@ -7,3 +7,5 @@ Content-Type: application/json
   "email": "ashinzekene@gmail.com",
   "firstname": "Ekene"
 }
+###
+GET http://localhost:3001/posts
