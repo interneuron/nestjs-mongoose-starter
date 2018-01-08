@@ -6,13 +6,19 @@
   "scripts": {
     "start": "node index.js",
     "prestart:prod": "tsc",
+    "test": "jest",
     "start:prod": "node dist/server.js"
   },
   "dependencies": {
     "@nestjs/common": "^4.3.0",
     "@nestjs/core": "^4.3.0",
     "@nestjs/mongoose": "^1.0.1",
+    "@nestjs/testing": "^4.5.5",
+    "chai": "^4.1.2",
+    "jest": "^22.0.4",
+    "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.11.13",
+    "passport": "^0.4.0",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3",
     "typescript": "^2.4.2"

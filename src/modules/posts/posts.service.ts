@@ -4,7 +4,7 @@ import { InjectModel } from "@nestjs/mongoose";
 
 import { CreatePostDto } from "./dto/create-post.dto";
 import { Post } from "./interfaces/posts.interface";
-import { PostSchema } from "./schemas/posts.schema";
+import { PostSchema } from "./schemas/post.schema";
 
 @Component()
 export class PostsService {
@@ -14,12 +14,17 @@ export class PostsService {
     return await this.postModel.findById(userId)
   }
 
-  async create(user: CreatePostDto):Promise<Post> {
-    return await this.postModel.create(user)
+  async create(post: CreatePostDto):Promise<Post> {
+    return await this.postModel.create(post)
   }
   
   async getAll():Promise<Post[]> {
     return await this.postModel.find().exec()
+  }
+
+  async userPosts(userID: string): Promise<Post[]> {
+    console.log(userID)
+    return await this.postModel.find({ author: userID })
   }
   
 }

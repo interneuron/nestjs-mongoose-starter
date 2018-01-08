@@ -1,11 +1,19 @@
-GET http://localhost:3001/users
+GET http://localhost:3005/users
 Content-Type: application/json
 
 {
-  "username": "ekonash",
+  "username": "kendrick",
   "password": "ekonash",
-  "email": "ashinzekene@gmail.com",
-  "firstname": "Ekene"
+  "email": "kendrick@gmail.com",
+  "firstname": "EkenKendrick"
 }
 ###
-GET http://localhost:3001/posts
+GET http://localhost:3005/posts/user/5a4d662bd2b4933f34b601cd
+Content-Type: application/json
+
+{
+  "author": "5a4d662bd2b4933f34b601cd",
+  "title": "New Year Message",
+  "body": "Happy new year people, hope you're all fine",
+  "description": "No description yet"
+}
