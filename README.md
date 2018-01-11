@@ -1,3 +1,6 @@
-# NESTJS- MONGOOSE
+# NESTJS- MONGOOSE-STARTER
 
- A nestsjs node backend with mongoose, where user can create messages with passport jwt authentication
+ A SIMPLE NESTSJS MONGOOSE STARTER APPLICATION WITH  MIDDLEWARE CONFIGURATION
+
+- Application possesses two 2 models `users` and `posts` with CRUD operation suppport
+- Logger middleware
