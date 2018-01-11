@@ -18,7 +18,17 @@ export class UsersController {
   }
   
   @Get()
-  async findAll(): Promise<User[]> {
-    return this.userService.findAll();
+  async getAll(): Promise<User[]> {
+    return this.userService.getAll();
+  }
+  
+  @Post("/edit/:userID")
+  async update(@Param("userID") userID: string, @Body() newUser: CreateUserDto ): Promise<User> {
+    return this.userService.update(userID, newUser);
+  }
+
+  @Post("/remove/:userID")
+  async remove(@Param("userID") userID: string): Promise<User> {
+    return this.userService.remove(userID);
   }
 }
